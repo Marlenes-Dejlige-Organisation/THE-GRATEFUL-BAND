@@ -1,0 +1,441 @@
+
+//VARIABLER:
+
+
+/* Styling */
+*{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+:root{
+    --grøn: #35e313;
+}
+
+/* NAVIGATION */
+.nav-main{
+    background-color: #080a07;
+}
+.nav-main .mobile-menu {
+display: none;
+}
+
+div.right {
+    position: fixed;
+    top: 0;
+    right: 10rem;
+    z-index: 999;
+    padding: 1rem;
+}
+
+div.left {
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    margin: 1rem;
+    z-index: 999;
+    img{
+        width: 10%;
+    }
+}
+
+.nav-main ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin-left: -3.5rem;
+}
+
+.nav-main ul li a {
+    text-decoration: none;
+    color: #E5E5E5;
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 12px;
+}
+.nav-main ul li a:hover{
+    color: #35e313;
+}
+
+/* burgermenu */
+.burger {
+  background-color: #35e313;
+    padding: 10px;
+    position: relative;
+    z-index: 999;
+}
+
+
+
+.burger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-main ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+/* hgroup */
+header{
+    background-image: url('../IMG/baggrund_header.png');
+    background-size:cover;
+    width: 100vw;
+    height: 80vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 6vh;
+    line-height: 10vh;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 1rem;
+    
+}
+header hgroup{
+padding: 15%;
+    margin: auto;
+    text-align: center;
+}
+p{
+    color: white;
+    font-weight: 100;
+}
+/* section one */
+.section-One{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+.hOnWhite{
+    margin: auto;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.hOnWhite h2{
+    font-weight: 300;
+    line-height: 4rem;
+}
+.hOnWhite h2 span{
+    background-color: #35e313;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+.hOnWhite p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+}
+.cards p{
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+}
+.cards footer{
+    margin-top: 2rem;
+}
+.cards button{
+    font-weight: 800;
+    padding: 1rem;
+    background-color: white;
+    border: 0.1px rgb(204, 203, 203) solid;
+    border-radius: 2rem;
+    box-shadow: -1px 8px 24px 0px rgba(0, 0, 0, 0.36);
+}
+.cards button:hover{
+    background-color: #35e313;
+    filter: drop-shadow(1px 11px 3px #c5c4c475);
+    border: none;
+}
+.banner{
+    background-image: url('../IMG/benefits.png');
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* section two */
+.section-two{
+    padding-top: 10%;
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.section-two article:first-of-type h2{
+    font-weight: 100;
+    color: #35e313;
+    font-size: 36px;
+}
+.section-two article:first-of-type{
+    background-color: rgba(0, 0, 0, 0.461);
+    text-align: center;
+    padding: 2rem;
+    width: 500px;
+}
+.section-two article:last-of-type{
+    color: white;
+    text-align: right;
+    margin: auto;
+    font-size: 36px;
+}
+.two h2:first-of-type{
+    font-weight: 100;
+}
+.section-two button{
+    margin: 3rem 0.5rem 1rem 0.5rem;
+    padding: 1rem;
+}
+.section-two button:hover{
+    background-color: #35e313;
+    border: none;
+}
+.section-two button:first-of-type{
+transform: rotate(180deg);
+}
+/* FORSKUDT */
+.forskudt{
+    margin: auto;
+    width: 100%;
+}
+.forskudt p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+}
+.forskudt figcaption{
+    box-shadow: -1px 8px 24px 0px rgba(0, 0, 0, 0.36);
+    background-color: white;
+    width: 600px;
+    padding: 3rem;
+    position: absolute;
+    top:10rem;
+    left: 18rem;
+}
+.forskudt h2{
+    font-weight: 300;
+}
+.forskudt span{
+    color: #35e313;
+    font-weight: 700;
+}
+
+.forskudt figure{
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+.forskudt figure:last-of-type{
+    direction: rtl;
+}
+.forskudt figcaption:last-of-type{
+    right: 18rem;
+}
+.video{
+    background-image: url('../IMG/footer.png');
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* section three */
+.section-three{
+    padding-top: 30%;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    text-align: right;
+}
+
+.section-three figure{
+    /* background-color: black; */
+    display: flex;
+    justify-content: flex-end;  
+   
+}
+.section-three figcaption{
+    padding: 1rem;
+}
+
+.section-three h3{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* footer */
+.footerart{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+    position: relative;
+}
+.footerart h3{
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+.footerart p{
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+}
+.footerart button{
+   background-color: #35e313;
+   padding: 0.5rem;
+   border: none;
+   width: 100%;
+   margin-top: 0.5rem;
+}
+.footerart input{
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgba(230, 230, 230, 0.493);
+}
+.footerart button:hover{
+    background-color: #1a7008; 
+}
+
+.insta img{
+    width: 20%;
+}
+/* FORM validering */
+/* dette er kanten omkring feltet som kommer når der udfyldes */
+.field-error {
+    border-color: red;
+    border-width: 2px;
+  }
+  
+  /* dette er den lille fejlmeddelelse der kommer under rubrikken */
+  .text-error {
+    margin: 1rem;
+    display: block;
+    font-size: 0.7rem;
+    color: red;
+    text-align: left;
+  }
+
+  
+    .nav-main .burger {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 999;
+    }
+
+    .nav-main .mobile-menu {
+        position: fixed;
+        margin: 0;
+        left: 0;
+        top: 0;
+        padding-bottom: 1rem;
+        background-color: white;
+        width: 100%;
+        z-index: 998;
+    
+    }
+
+    .nav-main .burger.open~.mobile-menu {
+        display: block;
+    }
+
+    .nav-main .burger~.mobile-menu li a {
+        color:black;
+        padding: 1rem;
+        display: block;
+    }
+
+    .nav-main .burger~.mobile-menu li a:hover {
+        background-color: var(--grøn)
+    }
+    div.left {
+        left: 1rem;
+        z-index: 2;
+    }
+    header{
+       height: 60vh;
+       background-color: #1a7008;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    .banner{
+        height: fit-content;
+        
+    }
+    .section-two {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+    .two{
+        line-height: 4rem;
+        padding-bottom: 2rem;
+    }
+    .forskudt figure img{
+        width: 100%;
+        
+    }
+    .forskudt figcaption{
+        width: 400px;
+        top:2rem;
+        left: 2rem;
+    }
+    .forskudt figcaption:last-of-type{
+        width: 400px;
+        top:2rem;
+        right: 2rem;
+    }
+    .video{
+        height: 70%
+    }
+    .section-three {
+        width: 100%;
+        padding-right: 4rem;
+        padding-bottom: 4rem;
+    }
+    .footerart{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        text-align: left;
+        position: relative;
+    }
+  
