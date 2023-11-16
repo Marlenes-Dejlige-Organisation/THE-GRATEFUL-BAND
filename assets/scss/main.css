@@ -288,7 +288,9 @@ header .line {
 }
 .modal main #modal_close {
   font-size: 2rem;
-  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
 }
 .modal main #modal_close .fade {
   animation-name: fade;

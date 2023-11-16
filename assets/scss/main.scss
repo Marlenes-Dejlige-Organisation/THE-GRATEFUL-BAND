@@ -389,7 +389,9 @@ header {
 
     #modal_close {
       font-size: 2rem;
-      padding: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;
 
       .fade {
         animation-name: fade;
