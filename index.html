@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Grateful</title>
     <script src="assets/js/main.js"defer></script>
-    <link rel="stylesheet" href="/assets/scss/main.css">
+    <link rel="stylesheet" href="/assets/scss/main copy.css">
     <link rel="icon" type="image/x-icon" href="assets/img/LOGO/favicon_io/favicon.ico">
 </head>
 <body>
@@ -52,7 +52,7 @@
         <div class="tour">
            <article>
                 <h2 >TOUR 2024</h2>
-                <li>March 15: Los Angeles, CA, Electric Horizon Arena</li>
+                <li> <span>March 15: Los Angeles, CA,Electric Horizon Arena</span></li>
                 <li>March 18: Austin, TX, Th   underSound Hall</li>
                 <li >March 22: Chicago, IL, RoarHouse Stadium</li>
                 <li>March 26: New York City, NY, Amped-Up Theater</li>
@@ -93,9 +93,10 @@
         </figure>
     </section>
 
-        <div class="section-three" id="3"  >
+   <div class="section-three" id="3" >
    <h3>PHOTOALBUM</h3>
-                            <div><button href="#" onclick="displayModal('modal_container')" >LET ME SEE...</button>
+   <button href="#" onclick="displayModal('modal_container')" >LET ME SEE...</button>
+    <img src="assets/img/LOGO/logo.png" alt="logo" id="logo">
                                   <!-- START OF MODAL -->
   <div id="modal_container" class="modal">
     <main>
@@ -103,34 +104,30 @@
       <span
         id="modal_close"
         onclick="closeModal('modal_container')"
-        title="CLOSE THIS IMAGE"
-      >
-        &times;</span
-        
-      >
+        title="CLOSE THIS IMAGE">
+        &times;</span>
       <div id="modalContent"><section class="slideshow-container">
 
-        <!-- Full-width images with number -->
         <fig class="mySlides fade">
-            <img src="assets/img/pexels-jc-siller-8634867.jpg" style="width:100%">
+            <img src="assets/img/pexels-jc-siller-8634867.jpg" >
           </fig>
         <fig class="mySlides fade">
-          <img src="assets/img/pexels-brett-sayles-1309240.jpg" style="width:100%">
+          <img src="assets/img/pexels-brett-sayles-1309240.jpg" >
         </fig>
         <fig class="mySlides fade">
-          <img src="assets/img/pexels-wendy-wei-1699161.jpg" style="width:100%">
+          <img src="assets/img/pexels-wendy-wei-1699161.jpg">
         </fig>
       
-      <!-- The dots/circles - når man klikker trickes js-funktionen currentSlide. Tallene i paranteserne refererer til billederne der skal vises, det første oppe i html er 1, næste 2....-->
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-      </div></div>
+      </div>
+    </div>
     </main>
   </div>
   <!-- END OF MODAL -->
-                                <img src="assets/img/LOGO/logo.png" alt="logo">
+                               
                             </div>
 
           

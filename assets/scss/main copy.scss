@@ -1,3 +1,5 @@
+// TIL ANDRE ENHEDER END iphoneSE, fra 413 px
+
 @font-face {
   font-family: 'deco';
   src: url('/assets/font/RousseauDeco.ttf') format('truetype');
@@ -37,8 +39,8 @@ body {
   // Burger menu styles
   .burger {
     .bar {
-      width: 1.5rem;
-      height: 0.2rem;
+      width: 6vh;
+      height: 1vh;
       background-color: $note;
       margin: 6px 0;
       transition: 0.4s;
@@ -67,7 +69,7 @@ body {
   }
 
   .burger {
-    padding: 2rem;
+    padding: 1rem;
     display: block;
     position: fixed;
     top: 0;
@@ -91,17 +93,16 @@ body {
     z-index: 998;
 
     li a {
+      font-size: 4vh;
       color: $black;
       padding: 0;
       display: block;
+      &:hover {
+        background-color: $light;
+      }
     }
   }
 
-  .mobile-menu li a:hover {
-    &:hover {
-      background-color: $light;
-    }
-  }
 }
 
 // header
@@ -118,23 +119,30 @@ header {
     padding: 9rem 4rem;
   display: flex;
   justify-content: center;
+  min-width: 100px;
   
   img {
-    margin-top: 0.4rem;
-    padding: 0.1rem;
-    width: 100%;
+    padding: 0.2rem;
+width: 12vh;
+height: 12vh;
+float: right;
     background-color: #C9F80F;
-    border-radius: 10rem;
-    
+    border-radius: 15rem;
   }
   
   h1 {
+    position: relative;
     margin-top: 1rem;
     padding-left: 1rem;
     font-size: 6vh;
     font-weight: 100;
-    line-height: 2rem;
+    line-height: 5vh;
     color: $note;
+    @media (min-width: 800px){
+      font-size: 18vh;
+line-height: 15vh;
+    
+  }
   }
   
   p {
@@ -221,7 +229,7 @@ header {
     background-color: $note;
     position: absolute;
     width: 100vw;
-    bottom: 16rem;
+    top: 60vh;
     height: 0.1rem;
   }
 }
@@ -231,7 +239,7 @@ header {
   position: relative;
   z-index: -1;
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 
@@ -247,14 +255,14 @@ header {
 }
 
 .tour {
-  padding-top: 15%;
+  padding-top: 25vh;
   position: absolute;
-  top: 23rem;
+  top: 39vh;
   left: 0;
   right: 0;
   bottom: 0;
 
-  article {
+article {
     background-color: rgba(0, 0, 0, 0.461);
     font-weight: 100;
     padding: 2rem;
@@ -262,21 +270,36 @@ header {
     padding-bottom: 2rem;
 
     h2 {
-      font-weight: 100;
-      color: $note;
-      font-size: 3rem;
-      text-align: left;
-      margin-bottom: 2rem;
+        font-weight: 100;
+        color: $note;
+        font-size: 3rem;
+        text-align: left;
+        margin-bottom: 2rem;
     }
 
     li {
-      font-weight: 100;
-      font-size: 0.8rem;
-      line-height: 2rem;
+        font-weight: 100;
+        font-size: 3vh;
+        text-align: left;
+        span{
+          color: $blue;
+          text-align: right;
+        }
     }
-  }
-}
 
+    @media (min-width: 700px) {
+      h2{
+        font-size: 6vh;
+      }
+        li {
+        
+           line-height: 5.7vh;
+            font-size: 5vh; /* Prøv å endre størrelsen direkte her */
+        }
+    }
+}
+}
+  
 // ABOUT US
 .cards {
   background-color: $note;
@@ -320,11 +343,12 @@ header {
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  height: 70vh;
 
   h3 {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     color: $note;
-    font-size: 1rem;
+    font-size: 4vh;
     text-transform: uppercase;
   }
 
@@ -332,37 +356,15 @@ header {
     margin-left: 1rem;
   }
 
-  img {
-    width: 100%;
-    padding: 2rem;
-  }
-}
-
-.slideshow-container {
-  position: relative;
-  margin: auto;
-
-  img {
-    height: 40vh;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .mySlides {
-    display: none;
-  }
-}
-
-// CSS MODAL
 .modal {
   display: none;
   position: absolute;
   z-index: 9999;
   top: 0;
   width: 100%;
-  height: 100%;
   overflow: auto;
-  background-color: #00000066;
+  background-color: $light;
+  height: 100vh;
 
   .dot {
     cursor: pointer;
@@ -387,12 +389,33 @@ header {
     top: 0;
     width: 100%;
     margin: auto;
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+    
+    
+      img {
+        height: 60vh;
+        object-fit:cover;
+        width: 100%;
+        @media (min-width: 1000px) {
+          height: 80vh;
+          object-position: center;
+        }
+      }
+      .mySlides {
+        display: none;
+      }
+    }
 
     #modal_close {
       font-size: 2rem;
       display: flex;
       justify-content: flex-end;
       padding: 1rem;
+      @media (min-width: 890px){
+        font-size: 6rem;
+      }
 
       .fade {
         animation-name: fade;
@@ -411,6 +434,36 @@ header {
     }
   }
 }
+  img {
+    width: 100%;
+    padding: 2rem;
+  }
+  @media (min-width: 550px) {
+    h3{
+      font-size: 6vh;
+      
+    }
+      button {
+        text-align: center;
+          font-size: 3vh; /* Prøv å endre størrelsen direkte her */
+      }
+#logo{
+  display: block;
+  width: 50%;
+  margin:auto;
+}
+  }
+  @media (min-width: 1000px) {
+    #logo{
+      display: block;
+      width: 27%;
+      margin:auto;
+    }
+
+  }
+}
+
+
 
 // Footer
 .footer-main {
@@ -419,24 +472,36 @@ header {
   height: 40vh;
   color: $light;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   margin-top: 1rem;
   
 
   h3 {
     color: $blue;
+    @media (min-width: 700px){
+      font-size: 6vh;
+    }
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 2rem;
+    @media (min-width: 700px){
+      font-size: 3vh;
+    }
   }
 
   button {
     background-color: $note;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border: none;
     border-radius: 0.6rem;
     padding: 0.5rem;
+
+    @media (min-width: 700px){
+      font-size: 3vh;
+      padding: 2vh;
+      margin-top: 2vh;
+    }
     
   }
 
@@ -448,8 +513,14 @@ header {
   }
 
   .text-error {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: $note;
-    padding-left: 4rem;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 700px){
+      font-size: 3vh;
+line-height: 8vh;
+    }
   }
 }
