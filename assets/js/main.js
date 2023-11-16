@@ -1,20 +1,29 @@
     // JavaScript til at åbne og lukke burgermenuen
-    const burger = document.querySelector('.burger');
-    const mobileMenu = document.querySelector('.mobile-menu');
+// JavaScript to open and close the burger menu
+const burger = document.querySelector('.burger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuPunkter = document.querySelectorAll('.mobile-menu a');
 
-    burger.addEventListener('click', function () {
-        this.classList.toggle('open');
-        mobileMenu.classList.toggle('open');
-    });
+burger.addEventListener('click', function () {
+  this.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+menuPunkter.forEach((menuPunkt) => {
+  menuPunkt.addEventListener('click', function () {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
 
     //FORM og validering
-    const error_message = "Du skal skrive noget...";
+    const error_message = "Hey...you forgot something really important !";
 
 function validateForm(form) {
   if (form.email.value === "") {
     showError(form.email);
   } else if (!validateEmail(form.email.value)) {
-    showError(form.email, 'Ugyldig email-adresse.');
+    showError(form.email, "No-no-no... dear friend, that doesn't work...");
     return false;
   } else {
     removeError(form.email);
@@ -23,7 +32,7 @@ function validateForm(form) {
   // Hvis der ikke er nogen fejl, skjuler vi modalen, viser en bekræftelsesmeddelelse efter en lille timeout og tømmer formularen
   if (!form.querySelector('.text-error')) {
     setTimeout(function() {
-      alert('TAK! Du er tilmeldt');
+      alert('Fantastic! We are looking forward to keeping you updated <3');
       form.reset(); // Tøm formularen
     }, 500);
   }
@@ -68,3 +77,47 @@ function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
+
+let slideIndex = 1; //vi har en variabel som vi kalder slideIndex som loader med nr 2
+
+showSlides(slideIndex);//vi starter med at tricke funktionen showSlides med vores slideIndex
+
+// Next/previous controls
+function plusSlides(n) { 
+showSlides(slideIndex += n); //+= kaldes en "addidtion assignment operator" og den lægger det til man skriver derefter, hvad enten det er et tal eller en string til det der er
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n); //denne funktion gør at der vises det billede som hører til den pågældende dot
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+//Modal
+
+  function displayModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  function displayModal(id, src, desc) {
+    document.getElementById(id).style.display = "block";
+    document.getElementById("desc").innerHTML = desc;
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
