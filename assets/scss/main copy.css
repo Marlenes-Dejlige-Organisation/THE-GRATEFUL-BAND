@@ -78,10 +78,10 @@ body {
 header {
   background-image: url("../img/pexels-mart-production-7577910.jpg");
   background-size: cover;
-  width: 100vw;
-  height: 60vh;
   background-position: center;
   background-attachment: fixed;
+  width: 100vw;
+  height: 60vh;
 }
 header hgroup {
   padding: 9rem 4rem;
@@ -308,6 +308,8 @@ header .line {
   position: absolute;
   right: 3vw;
   top: 0;
+  color: black;
+  border-radius: 100px;
   z-index: 9999;
 }
 @media (min-width: 890px) {
