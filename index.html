@@ -1,162 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Grateful</title>
-    <script src="assets/js/main.js"defer></script>
-    <link rel="stylesheet" href="/assets/scss/main copy.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/LOGO/favicon_io/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Grateful</title>
+  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="/assets/scss/main copy.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/LOGO/favicon_io/favicon.ico">
 </head>
+
 <body>
-    <main>
-<!-- HEADER -->
-    <header>
 
-        <!-- NAVIGATION -->
-        <nav class="nav-main">
-            <!-- burgermenu -->
-            <div class="burger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="mobile-menu">
-                <li><a href="#">HOME</a></li>
-                    <li><a href="#1">TOUR PROGRAMME 2024</a></li>
-                    <li><a href="#2">ABOUT US</a></li>
-                    <li><a href="#3">PHOTOALBUM</a></li>
-                    <li><a href="#4">STAY IN TOUCH</a></li>
-                   
-            </ul>
-        </nav>
- <!-- home -->
-        <hgroup>
-            <div class="left">
-                <img src="assets/img/LOGO/logo.png" alt="logo" class="heartbeat">
-            </div>
-            <h1>THE <br>GRATEFUL</h1>
-            <div class="line" id="1"></div>
-        </hgroup>
-    </header>
-   
-  
-
-     <!-- tour -->
-    <div class="video-container">
-        <video class="video" autoplay loop muted playsinline>
-          <source src="/assets/img/video/pexels-free-creative-stuff-5575581 (720p).mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+  <!-- HEADER -->
+  <header>
+    <!-- NAVIGATION -->
+    <nav class="nav-main">
+      <!-- burgermenu -->
+      <div class="burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
-        <div class="tour">
-           <article>
-                <h2 >TOUR 2024</h2>
-                <li> <span>March 15: Los Angeles, CA,Electric Horizon Arena</span></li>
-                <li>March 18: Austin, TX, Th   underSound Hall</li>
-                <li >March 22: Chicago, IL, RoarHouse Stadium</li>
-                <li>March 26: New York City, NY, Amped-Up Theater</li>
-                <li >March 30: Nashville, TN, Rocker's Haven</li>
-                <li >April 3: Seattle, WA, Pinnacle Pavilion</li>
-                <li >April 7: San Francisco, CA, BayBeat Arena</li>
-              <li id="2"></li>
-            </article >
-
-        </div>
-
-
-    <!-- about us -->
-    <section class="cards">
-        <figure>
-            <img src="assets/img/member1.jpg" alt="picture">
-            <figcaption>
-                    <h3>MIKI</h3>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="assets/img/member2.jpg" alt="picture">
-            <figcaption>
-                    <h3>LIV</h3>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="assets/img/member3.jpg" alt="picture">
-            <figcaption>
-                    <h3>KEVIN</h3>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="assets/img/member4.jpg" alt="picture">
-            <figcaption>
-                    <h3>DONNA</h3>
-            </figcaption>
-        </figure>
-    </section>
-
-   <div class="section-three" id="3" >
-   <h3>PHOTOALBUM</h3>
-   <button href="#" onclick="displayModal('modal_container')" >LET ME SEE...</button>
-    <img src="assets/img/LOGO/logo.png" alt="logo" id="logo">
-                                  <!-- START OF MODAL -->
-  <div id="modal_container" class="modal">
-    <main>
-      <!-- CLOSING  BUTTON -->
-      <span
-        id="modal_close"
-        onclick="closeModal('modal_container')"
-        title="CLOSE THIS IMAGE">
-        &times;</span>
-      <div id="modalContent"><section class="slideshow-container">
-
-        <fig class="mySlides fade">
-            <img src="assets/img/pexels-jc-siller-8634867.jpg" >
-          </fig>
-        <fig class="mySlides fade">
-          <img src="assets/img/pexels-brett-sayles-1309240.jpg" >
-        </fig>
-        <fig class="mySlides fade">
-          <img src="assets/img/pexels-wendy-wei-1699161.jpg">
-        </fig>
-      
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <ul class="mobile-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#1">TOUR PROGRAMME 2024</a></li>
+        <li><a href="#2">ABOUT US</a></li>
+        <li><a href="#3">PHOTOALBUM</a></li>
+        <li><a href="#4">STAY IN TOUCH</a></li>
+      </ul>
+    </nav>
+    <!-- home -->
+    <hgroup>
+      <div class="left">
+        <img src="assets/img/LOGO/logo.png" alt="logo" class="heartbeat">
       </div>
-    </div>
-    </main>
+      <h1>THE <br>GRATEFUL</h1>
+      <div class="line" id="1"></div>
+    </hgroup>
+  </header>
+
+  <!-- tour -->
+  <!-- tour baggrund -->
+  <div class="video-container">
+    <video class="video" autoplay loop muted playsinline>
+      <source src="/assets/img/video/pexels-free-creative-stuff-5575581 (720p).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-  <!-- END OF MODAL -->
-                               
-                            </div>
+  <!-- tourcontent -->
+  <div class="tour">
+    <article>
+      <h2>TOUR 2024</h2>
+      <li> <span>March 15: Los Angeles, CA,Electric Horizon Arena</span></li>
+      <li>March 18: Austin, TX, Th underSound Hall</li>
+      <li> <span>March 22: Chicago, IL, RoarHouse Stadium</span></li>
+      <li>March 26: New York City, NY, Amped-Up Theater</li>
+      <li> <span>March 30: Nashville, TN, Rocker's Haven</span></li>
+      <li>April 3: Seattle, WA, Pinnacle Pavilion</li>
+      <li> <span>April 7: San Francisco, CA, BayBeat Arena</span></li>
+      <li id="2"></li>
+    </article>
+  </div>
+  <!-- about us -->
+  <section class="cards">
+    <figure>
+      <img src="assets/img/member1.jpg" alt="picture">
+    </figure>
+    <figure>
+      <img src="assets/img/member2.jpg" alt="picture">
+    </figure>
+    <figure>
+      <img src="assets/img/member3.jpg" alt="picture">
+    </figure>
+    <figure>
+      <img src="assets/img/member4.jpg" alt="picture">
+    </figure>
+  </section>
+  <!-- Photoalbum -->
+  <div class="section-three" id="3">
+    <h3>PHOTOALBUM</h3>
+    <button href="#" onclick="displayModal('modal_container')">LET ME SEE...</button>
+    <img src="assets/img/LOGO/logo.png" alt="logo" id="logo">
+    <!-- START OF MODAL med fotoslider -->
+    <div id="modal_container" class="modal">
+      <main>
+        <!-- CLOSING  BUTTON på fotos -->
+        <span id="modal_close" onclick="closeModal('modal_container')" title="CLOSE THIS IMAGE">
+          &times;</span>
+        <!-- selve indholdet  slideren fx billeder -->
+        <div id="modalContent">
+          <section class="slideshow-container">
+            <fig class="mySlides fade">
+              <img src="assets/img/women-with-guitar-coverlet.jpg">
+            </fig>
+            <fig class="mySlides fade">
+              <img
+                src="assets/img/repetition-rock-music-band-bass-guitar-player-electric-guitar-player-drummer-loft.jpg">
+            </fig>
+            <fig class="mySlides fade">
+              <img src="assets/img/music-band-guitarist-performing-repetition-recording-studio.jpg">
+            </fig>
+            <div id="dots" style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </section>
+          </div>
+      </main>
+    </div>
+    <!-- END OF MODAL -->
+  </div>
+  <!-- END OF section three -->
 
-          
-        </div>
-        <footer>
-                <section class="footer-main" id="4">
-                            <article>
-                                <h3>NEWSLETTER:</h3>
-                                <p>Stay updated with our latest</p>
-                                <form>
-                                    
-                                      <section>
-                                        <input type="email"name="email"id="email"placeholder="Email" required/>
-                                      </section>
-                                      <section>
-                                        <button type="button" onclick="validateForm(this.form)">Send</button>
-                                      </section>
-                                
-                                  </form>
-                            </article>
-                       
-
-
-                </section>
-         
-        </footer>
- 
-
-    </main>
+  <!-- footer: -->
+  <footer class="footer-main" id="4">
+    <div class="line"></div>
+    <article>
+      <h3>NEWSLETTER:</h3>
+      <p>Stay updated with our latest</p>
+      <form>
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <button type="button" onclick="validateForm(this.form)">Send</button>
+      </form>
+    </article>
+  </footer>
 </body>
 
 </html>

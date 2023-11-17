@@ -22,38 +22,6 @@ body {
   color: white;
 }
 
-.nav-main .burger .bar {
-  width: 6vh;
-  height: 1vh;
-  background-color: #C9F80F;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-.nav-main .burger.open .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-  background-color: black;
-}
-.nav-main .burger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-.nav-main .burger.open .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-  background-color: black;
-}
-.nav-main ul {
-  display: none;
-}
-.nav-main .burger {
-  padding: 1rem;
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0.7rem;
-  z-index: 999;
-}
-.nav-main .burger.open ~ .mobile-menu {
-  display: block;
-}
 .nav-main .mobile-menu {
   margin-top: 1rem;
   position: fixed;
@@ -73,6 +41,38 @@ body {
 }
 .nav-main .mobile-menu li a:hover {
   background-color: white;
+}
+.nav-main .bar {
+  width: 6vh;
+  height: 1vh;
+  background-color: #C9F80F;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.nav-main.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: black;
+}
+.nav-main.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-main.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: black;
+}
+.nav-main ul {
+  display: none;
+}
+.nav-main .burger {
+  padding: 1rem;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0.7rem;
+  z-index: 999;
+}
+.nav-main .burger.open ~ .mobile-menu {
+  display: block;
 }
 
 header {
@@ -96,26 +96,6 @@ header hgroup img {
   float: right;
   background-color: #C9F80F;
   border-radius: 15rem;
-}
-header hgroup h1 {
-  position: relative;
-  margin-top: 1rem;
-  padding-left: 1rem;
-  font-size: 6vh;
-  font-weight: 100;
-  line-height: 5vh;
-  color: #C9F80F;
-}
-@media (min-width: 800px) {
-  header hgroup h1 {
-    font-size: 18vh;
-    line-height: 15vh;
-  }
-}
-header hgroup p {
-  font-size: 0.8rem;
-  color: white;
-  font-weight: 100;
 }
 header hgroup .heartbeat {
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -141,6 +121,21 @@ header hgroup .heartbeat {
   45% {
     transform: scale(1);
     animation-timing-function: ease-out;
+  }
+}
+header h1 {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 6vh;
+  font-weight: 100;
+  line-height: 5vh;
+  color: #C9F80F;
+}
+@media (min-width: 800px) {
+  header h1 {
+    font-size: 18vh;
+    line-height: 15vh;
   }
 }
 header .line {
@@ -194,7 +189,7 @@ header .line {
 }
 .tour article li {
   font-weight: 100;
-  font-size: 3vh;
+  font-size: 1.5rem;
   text-align: left;
 }
 .tour article li span {
@@ -206,8 +201,8 @@ header .line {
     font-size: 6vh;
   }
   .tour article li {
-    line-height: 5.7vh;
-    font-size: 5vh; /* Prøv å endre størrelsen direkte her */
+    line-height: 8vh;
+    font-size: 5vh;
   }
 }
 
@@ -224,10 +219,7 @@ header .line {
   position: relative;
   color: rgb(17, 123, 162);
 }
-.cards figure {
-  position: relative;
-}
-.cards figure img {
+.cards img {
   width: 100%;
   height: 90%;
   -o-object-fit: cover;
@@ -235,12 +227,8 @@ header .line {
   filter: grayscale(1);
   transition: transform 0.3s ease;
 }
-.cards figure img:hover {
+.cards img:hover {
   transform: scale(1.2);
-}
-.cards h3 {
-  font-weight: 300;
-  font-size: 0.7rem;
 }
 
 .section-three {
@@ -266,27 +254,14 @@ header .line {
   z-index: 9999;
   top: 0;
   width: 100%;
-  overflow: auto;
   background-color: white;
-  height: 100vh;
-}
-.section-three .modal .dot {
-  cursor: pointer;
-  height: 1rem;
-  width: 1rem;
-  margin-bottom: 2rem;
-  background-color: #C9F80F;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.section-three .modal .dot.active {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 40vh;
 }
 .section-three .modal main {
   position: absolute;
   background-color: white;
+  position: relative;
+  height: 70vh;
   color: #333;
   top: 0;
   width: 100%;
@@ -296,15 +271,31 @@ header .line {
   position: relative;
   margin: auto;
 }
+.section-three .modal main .slideshow-container .dot {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  background-color: #C9F80F;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.section-three .modal main .slideshow-container .dot.active {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 .section-three .modal main .slideshow-container img {
   height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  margin-top: 6vh;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 @media (min-width: 1000px) {
   .section-three .modal main .slideshow-container img {
-    height: 80vh;
+    height: 60vh;
     -o-object-position: center;
        object-position: center;
   }
@@ -314,9 +305,10 @@ header .line {
 }
 .section-three .modal main #modal_close {
   font-size: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
+  position: absolute;
+  right: 3vw;
+  top: 0;
+  z-index: 9999;
 }
 @media (min-width: 890px) {
   .section-three .modal main #modal_close {
@@ -335,9 +327,12 @@ header .line {
     opacity: 1;
   }
 }
-.section-three img {
+.section-three #logo {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
+  display: block;
+  width: 50%;
+  margin: auto;
 }
 @media (min-width: 550px) {
   .section-three h3 {
@@ -345,12 +340,8 @@ header .line {
   }
   .section-three button, .section-three .footer-main input, .footer-main .section-three input {
     text-align: center;
-    font-size: 3vh; /* Prøv å endre størrelsen direkte her */
-  }
-  .section-three #logo {
-    display: block;
-    width: 50%;
-    margin: auto;
+    font-size: 3vh;
+    /* Prøv å endre størrelsen direkte her */
   }
 }
 @media (min-width: 1000px) {
@@ -363,12 +354,21 @@ header .line {
 
 .footer-main {
   background-color: rgba(0, 0, 0, 0.274);
-  padding: 1rem;
   height: 40vh;
   color: white;
   position: relative;
   margin-bottom: 3rem;
   margin-top: 1rem;
+}
+.footer-main article {
+  padding: 1rem;
+}
+.footer-main .line {
+  background-color: #C9F80F;
+  position: absolute;
+  width: 100vw;
+  top: -1.8vh;
+  height: 0.1rem;
 }
 .footer-main h3 {
   color: rgb(17, 123, 162);

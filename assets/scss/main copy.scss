@@ -9,7 +9,6 @@
 $black: black;
 $light: white;
 $note: #C9F80F;
-$note2: rgb(232, 17, 221);
 $blue: rgb(17, 123, 162);
 
 
@@ -33,54 +32,8 @@ body {
   color: $light;
 }
 
-
 // NAVIGATION
 .nav-main {
-  // Burger menu styles
-  .burger {
-    .bar {
-      width: 6vh;
-      height: 1vh;
-      background-color: $note;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-
-    &.open {
-      .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-        background-color: $black;
-      }
-
-      .bar:nth-child(2) {
-        opacity: 0;
-      }
-
-      .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-        background-color: $black;
-      }
-    }
-  }
-
-  // Main navigation styles
-  ul {
-    display: none;
-  }
-
-  .burger {
-    padding: 1rem;
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0.7rem;
-    z-index: 999;
-
-    &.open ~ .mobile-menu {
-      display: block;
-    }
-  }
-
   .mobile-menu {
     margin-top: 1rem;
     position: fixed;
@@ -91,7 +44,6 @@ body {
     background-color: $note;
     width: 100%;
     z-index: 998;
-
     li a {
       font-size: 4vh;
       color: $black;
@@ -102,7 +54,40 @@ body {
       }
     }
   }
-
+    .bar {
+      width: 6vh;
+      height: 1vh;
+      background-color: $note;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    &.open {
+      .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: $black;
+      }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+        background-color: $black;
+      }
+    }
+    ul {
+    display: none;
+    }
+    .burger {
+    padding: 1rem;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0.7rem;
+    z-index: 999;
+    &.open~.mobile-menu {
+      display: block;
+    }
+  }
 }
 
 // header
@@ -113,118 +98,112 @@ header {
   height: 60vh;
   background-position: center;
   background-attachment: fixed;
-  
-
   hgroup {
     padding: 9rem 4rem;
-  display: flex;
-  justify-content: center;
-  min-width: 100px;
-  
-  img {
-    padding: 0.2rem;
-width: 12vh;
-height: 12vh;
-float: right;
-    background-color: #C9F80F;
-    border-radius: 15rem;
-  }
-  
-  h1 {
-    position: relative;
-    margin-top: 1rem;
-    padding-left: 1rem;
-    font-size: 6vh;
-    font-weight: 100;
-    line-height: 5vh;
-    color: $note;
-    @media (min-width: 800px){
-      font-size: 18vh;
-line-height: 15vh;
-    
-  }
-  }
-  
-  p {
-    font-size: 0.8rem;
-    color:$light;
-    font-weight: 100;
-  }
-  .heartbeat {
-    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-            animation: heartbeat 1.5s ease-in-out infinite both;
-  }
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+    img {
+      padding: 0.2rem;
+      width: 12vh;
+      height: 12vh;
+      float: right;
+      background-color: $note;
+      border-radius: 15rem;
+    }
+    .heartbeat {
+      -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+      animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+    @-webkit-keyframes heartbeat {
+      from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
 
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-  }
+      10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
 
+      17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+
+      33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+
+      45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+    }
+
+    @keyframes heartbeat {
+      from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+      10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+      17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+
+      33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+
+      45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+    h1 {
+      position: relative;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-size: 6vh;
+      font-weight: 100;
+      line-height: 5vh;
+      color: $note;
+      @media (min-width: 800px) {
+        font-size: 18vh;
+        line-height: 15vh;
+      }
+    }
   .line {
     background-color: $note;
     position: absolute;
@@ -234,7 +213,7 @@ line-height: 15vh;
   }
 }
 
-// TOUR
+// TOUR baggrund:
 .video-container {
   position: relative;
   z-index: -1;
@@ -242,7 +221,6 @@ line-height: 15vh;
   height: 100vh;
   overflow: hidden;
   position: relative;
-
   .video {
     z-index: 1;
     width: 100%;
@@ -253,7 +231,7 @@ line-height: 15vh;
     left: 0;
   }
 }
-
+//tour content
 .tour {
   padding-top: 25vh;
   position: absolute;
@@ -261,45 +239,40 @@ line-height: 15vh;
   left: 0;
   right: 0;
   bottom: 0;
-
-article {
+  article {
     background-color: rgba(0, 0, 0, 0.461);
     font-weight: 100;
     padding: 2rem;
     margin: 1rem;
     padding-bottom: 2rem;
-
     h2 {
-        font-weight: 100;
-        color: $note;
-        font-size: 3rem;
-        text-align: left;
-        margin-bottom: 2rem;
+      font-weight: 100;
+      color: $note;
+      font-size: 3rem;
+      text-align: left;
+      margin-bottom: 2rem;
     }
-
     li {
-        font-weight: 100;
-        font-size: 3vh;
-        text-align: left;
-        span{
-          color: $blue;
-          text-align: right;
-        }
+      font-weight: 100;
+      font-size: 1.5rem;
+      text-align: left;
+      span {
+        color: $blue;
+        text-align: right;
+      }
     }
-
     @media (min-width: 700px) {
-      h2{
+      h2 {
         font-size: 6vh;
       }
-        li {
-        
-           line-height: 5.7vh;
-            font-size: 5vh; /* Prøv å endre størrelsen direkte her */
-        }
+      li {
+        line-height: 8vh;
+        font-size: 5vh;
+      }
     }
+  }
 }
-}
-  
+
 // ABOUT US
 .cards {
   background-color: $note;
@@ -313,30 +286,19 @@ article {
   text-align: center;
   position: relative;
   color: $blue;
-
-  figure {
-    position: relative;
-  }
-
-  figure img {
+  img {
     width: 100%;
     height: 90%;
     object-fit: cover;
     filter: grayscale(1);
     transition: transform 0.3s ease;
-
     &:hover {
       transform: scale(1.2);
     }
   }
-
-  h3 {
-    font-weight: 300;
-    font-size: 0.7rem;
-  }
 }
 
-// section three
+// PHOTOALBUM - section three
 .section-three {
   background-image: url("../img/pexels-mart-production-7577910.jpg");
   background-size: cover;
@@ -344,120 +306,122 @@ article {
   background-attachment: fixed;
   position: relative;
   height: 70vh;
-
   h3 {
     padding: 1rem 1rem 0 1rem;
     color: $note;
     font-size: 4vh;
     text-transform: uppercase;
   }
-
   button {
     margin-left: 1rem;
   }
-
-.modal {
-  display: none;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  width: 100%;
-  overflow: auto;
-  background-color: $light;
-  height: 100vh;
-
-  .dot {
-    cursor: pointer;
-    height: 1rem;
-    width: 1rem;
-    margin-bottom: 2rem;
-    background-color: $note;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-
-    &.active {
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-  }
-
-  main {
+  .modal {
+    display: none;
     position: absolute;
-    background-color: $light;
-    color: #333;
+    z-index: 9999;
     top: 0;
     width: 100%;
-    margin: auto;
-    .slideshow-container {
+    background-color: $light;
+    height: 40vh;
+
+    main {
+      position: absolute;
+      background-color: $light;
       position: relative;
+      height: 70vh;
+      color: #333;
+      top: 0;
+      width: 100%;
       margin: auto;
-    
-    
-      img {
-        height: 60vh;
-        object-fit:cover;
-        width: 100%;
-        @media (min-width: 1000px) {
-          height: 80vh;
-          object-position: center;
+
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+        .dot {
+          cursor: pointer;
+          height: 1rem;
+          width: 1rem;
+          background-color: $note;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+          &.active {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
+        img {
+          height: 60vh;
+          object-fit: cover;
+          width: 100%;
+          margin-top: 6vh;
+          object-position: bottom;
+          @media (min-width: 1000px) {
+            height: 60vh;
+            object-position: center;
+          }
+        }
+        .mySlides {
+          display: none;
         }
       }
-      .mySlides {
-        display: none;
-      }
-    }
 
-    #modal_close {
-      font-size: 2rem;
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      @media (min-width: 890px){
-        font-size: 6rem;
-      }
+      #modal_close {
+        font-size: 2rem;
+        position: absolute;
+        right: 3vw;
+        top: 0;
+        z-index: 9999;
 
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+        @media (min-width: 890px) {
+          font-size: 6rem;
+        }
 
-        @keyframes fade {
-          from {
-            opacity: .4;
-          }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
 
-          to {
-            opacity: 1;
+          @keyframes fade {
+            from {
+              opacity: .4;
+            }
+
+            to {
+              opacity: 1;
+            }
           }
         }
       }
     }
   }
-}
-  img {
+
+  #logo {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
+    display: block;
+    width: 50%;
+    margin: auto;
   }
+
   @media (min-width: 550px) {
-    h3{
+    h3 {
       font-size: 6vh;
-      
+
     }
-      button {
-        text-align: center;
-          font-size: 3vh; /* Prøv å endre størrelsen direkte her */
-      }
-#logo{
-  display: block;
-  width: 50%;
-  margin:auto;
-}
+
+    button {
+      text-align: center;
+      font-size: 3vh;
+      /* Prøv å endre størrelsen direkte her */
+    }
+
   }
+
   @media (min-width: 1000px) {
-    #logo{
+    #logo {
       display: block;
       width: 27%;
-      margin:auto;
+      margin: auto;
     }
 
   }
@@ -468,24 +432,36 @@ article {
 // Footer
 .footer-main {
   background-color: rgba(0, 0, 0, 0.274);
-  padding: 1rem;
   height: 40vh;
   color: $light;
   position: relative;
   margin-bottom: 3rem;
   margin-top: 1rem;
-  
+
+  article {
+    padding: 1rem;
+  }
+
+  .line {
+    background-color: $note;
+    position: absolute;
+    width: 100vw;
+    top: -1.8vh;
+    height: 0.1rem;
+  }
 
   h3 {
     color: $blue;
-    @media (min-width: 700px){
+
+    @media (min-width: 700px) {
       font-size: 6vh;
     }
   }
 
   p {
     font-size: 2rem;
-    @media (min-width: 700px){
+
+    @media (min-width: 700px) {
       font-size: 3vh;
     }
   }
@@ -497,12 +473,11 @@ article {
     border-radius: 0.6rem;
     padding: 0.5rem;
 
-    @media (min-width: 700px){
+    @media (min-width: 700px) {
       font-size: 3vh;
       padding: 2vh;
       margin-top: 2vh;
     }
-    
   }
 
   input {
@@ -518,9 +493,11 @@ article {
     line-height: 2rem;
     display: flex;
     justify-content: center;
-    @media (min-width: 700px){
+
+    @media (min-width: 700px) {
       font-size: 3vh;
-line-height: 8vh;
+      line-height: 8vh;
     }
   }
+
 }
