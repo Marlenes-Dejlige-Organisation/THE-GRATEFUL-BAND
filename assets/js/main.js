@@ -16,6 +16,51 @@ menuPunkter.forEach((menuPunkt) => {
   });
 });
 
+//listen
+document.addEventListener('DOMContentLoaded', function () {
+  const events = [
+    { date: '2023-02-20', city: 'Berlin', venue: 'Music Club' },
+    { date: '2023-03-10', city: 'London', venue: 'Arena' },
+    { date: '2023-03-10', city: 'Madrid', venue: 'Madriska' },
+    { date: '2023-03-10', city: 'Lübeck', venue: 'The Venue' },
+
+  ];
+
+  function createEventElement(event) {
+    const eventElement = document.createElement('div');
+    eventElement.classList.add('event');
+
+    const dateElement = document.createElement('div');
+    dateElement.classList.add('date');
+    dateElement.textContent = event.date;
+    eventElement.appendChild(dateElement);
+
+    const cityElement = document.createElement('div');
+    cityElement.classList.add('city');
+    cityElement.textContent = event.city;
+    eventElement.appendChild(cityElement);
+
+    const venueElement = document.createElement('div');
+    venueElement.classList.add('venue');
+    venueElement.textContent = event.venue;
+    eventElement.appendChild(venueElement);
+
+    return eventElement;
+  }
+
+  function renderEvents() {
+    const eventListSection = document.getElementById('event-list');
+    events.forEach(event => {
+      const eventElement = createEventElement(event);
+      eventListSection.appendChild(eventElement);
+    });
+  }
+
+  // Initial rendering
+  renderEvents();
+});
+
+
     //FORM og validering
     const error_message = "Hey...you forgot something really important !";
 
@@ -71,15 +116,29 @@ function removeError(input) {
   input.classList.remove('field-error');
 }
 
-// Funktionen validateEmail validerer en email-adresse ved at sammenligne den med et regular expression
-// Den returnerer true, hvis email-adressen er gyldig, ellers returnerer den false.
+
 function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
+//Modal
+
+function displayModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+function displayModal(id, src, desc) {
+  document.getElementById(id).style.display = "block";
+  document.getElementById("desc").innerHTML = desc;
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+//PHotoalbum
 
 const myImages = ['assets/img/women-with-guitar-coverlet.jpg','assets/img/music-band-guitarist-performing-repetition-recording-studio.jpg','assets/img/pexels-josh-sorenson-995301.jpg', 'assets/img/repetition-rock-music-band-bass-guitar-player-electric-guitar-player-drummer-loft.jpg'];
-const intervalTime = 3000; // Skift hvert 3. sekund (justér efter behov)
+const intervalTime = 3000;
 let currentIndex = 0;
 
 function changeImage() {
@@ -96,17 +155,3 @@ function changeImage() {
   // Automatisk billedeændring med interval
   setInterval(changeImage, intervalTime);
 
-//Modal
-
-  function displayModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  function displayModal(id, src, desc) {
-    document.getElementById(id).style.display = "block";
-    document.getElementById("desc").innerHTML = desc;
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }

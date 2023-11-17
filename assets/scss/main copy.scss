@@ -242,37 +242,40 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  article {
+  h3{
+    font-size: 2rem;
+    color:$note;
+    padding: 1rem;
+  }
+  #event-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.461);
     font-weight: 100;
     padding: 2rem;
     margin: 1rem;
     padding-bottom: 2rem;
-    h2 {
-      font-weight: 100;
-      color: $note;
-      font-size: 3rem;
-      text-align: left;
-      margin-bottom: 2rem;
-    }
-    li {
-      font-weight: 100;
-      font-size: 1.5rem;
-      text-align: left;
-      span {
-        color: $blue;
-        text-align: right;
-      }
-    }
-    @media (min-width: 700px) {
-      h2 {
-        font-size: 6vh;
-      }
-      li {
-        line-height: 8vh;
-        font-size: 5vh;
-      }
-    }
+  }
+  
+  .event {
+    margin-bottom: 20px;
+  }
+  
+  .date {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .city {
+    font-size: 2rem;
+    color: $blue;
+  }
+  
+  .venue {
+    font-size: 14px;
+    color: $note;
+    text-align: center;
   }
 }
 

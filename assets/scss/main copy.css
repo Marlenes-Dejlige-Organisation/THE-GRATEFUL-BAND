@@ -173,37 +173,36 @@ header .line {
   right: 0;
   bottom: 0;
 }
-.tour article {
+.tour h3 {
+  font-size: 2rem;
+  color: #C9F80F;
+  padding: 1rem;
+}
+.tour #event-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.461);
   font-weight: 100;
   padding: 2rem;
   margin: 1rem;
   padding-bottom: 2rem;
 }
-.tour article h2 {
-  font-weight: 100;
-  color: #C9F80F;
-  font-size: 3rem;
-  text-align: left;
-  margin-bottom: 2rem;
+.tour .event {
+  margin-bottom: 20px;
 }
-.tour article li {
-  font-weight: 100;
-  font-size: 1.5rem;
-  text-align: left;
+.tour .date {
+  font-size: 18px;
+  font-weight: bold;
 }
-.tour article li span {
+.tour .city {
+  font-size: 2rem;
   color: rgb(17, 123, 162);
-  text-align: right;
 }
-@media (min-width: 700px) {
-  .tour article h2 {
-    font-size: 6vh;
-  }
-  .tour article li {
-    line-height: 8vh;
-    font-size: 5vh;
-  }
+.tour .venue {
+  font-size: 14px;
+  color: #C9F80F;
+  text-align: center;
 }
 
 .cards {
