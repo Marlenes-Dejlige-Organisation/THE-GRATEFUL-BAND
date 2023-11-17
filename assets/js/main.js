@@ -78,35 +78,24 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-let slideIndex = 1; //vi har en variabel som vi kalder slideIndex som loader med nr 2
+const myImages = ['assets/img/women-with-guitar-coverlet.jpg','assets/img/music-band-guitarist-performing-repetition-recording-studio.jpg','assets/img/pexels-josh-sorenson-995301.jpg', 'assets/img/repetition-rock-music-band-bass-guitar-player-electric-guitar-player-drummer-loft.jpg'];
+const intervalTime = 3000; // Skift hvert 3. sekund (justér efter behov)
+let currentIndex = 0;
 
-showSlides(slideIndex);//vi starter med at tricke funktionen showSlides med vores slideIndex
+function changeImage() {
+    const favoriteSection = document.getElementById('favorite');
+    favoriteSection.innerHTML = `<div class="image-container"><img src="${myImages[currentIndex]}" alt="Favorite Image" class="image"></div>`;
+  
+    // Opdater indekset til næste billede
+    currentIndex = (currentIndex + 1) % myImages.length;
+  }
+  
+  // Initial billedeændring
+  changeImage();
+  
+  // Automatisk billedeændring med interval
+  setInterval(changeImage, intervalTime);
 
-// Next/previous controls
-function plusSlides(n) { 
-showSlides(slideIndex += n); //+= kaldes en "addidtion assignment operator" og den lægger det til man skriver derefter, hvad enten det er et tal eller en string til det der er
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n); //denne funktion gør at der vises det billede som hører til den pågældende dot
-}
-
-function showSlides(n) {
-let i;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
 //Modal
 
   function displayModal(id) {
